@@ -1,0 +1,223 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Cosmic Background Animations */
+@keyframes milkyWayRotate {
+  0% {
+    transform: rotate(-2deg) scale(1);
+  }
+  25% {
+    transform: rotate(1deg) scale(1.02);
+  }
+  50% {
+    transform: rotate(3deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(0deg) scale(1.03);
+  }
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
+}
+
+@keyframes milkyWayDust {
+  0% {
+    transform: rotate(0deg) scale(1) translateX(0);
+  }
+  33% {
+    transform: rotate(2deg) scale(1.01) translateX(10px);
+  }
+  66% {
+    transform: rotate(-1deg) scale(0.99) translateX(-5px);
+  }
+  100% {
+    transform: rotate(0deg) scale(1) translateX(0);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  25% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  75% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+@keyframes shootingStarFast {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) translateY(-100px) scale(0.5);
+  }
+  5% {
+    opacity: 1;
+    transform: translateX(-80px) translateY(-80px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(400px) translateY(400px) scale(0.3);
+  }
+}
+
+@keyframes shootingStarMedium {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) translateY(-50px) scale(0.7);
+  }
+  8% {
+    opacity: 0.8;
+    transform: translateX(-30px) translateY(-30px) scale(1);
+  }
+  15% {
+    opacity: 1;
+    transform: translateX(0px) translateY(0px) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(350px) translateY(350px) scale(0.4);
+  }
+}
+
+@keyframes shootingStarSlow {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px) translateY(-80px) scale(0.8);
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateX(-50px) translateY(-50px) scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-20px) translateY(-20px) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(500px) translateY(500px) scale(0.2);
+  }
+}
+
+@keyframes shootingStarDiagonal {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) translateY(60px) scale(0.6);
+  }
+  7% {
+    opacity: 0.9;
+    transform: translateX(-40px) translateY(40px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(380px) translateY(-380px) scale(0.3);
+  }
+}
+
+/* Video Intro Styles */
+.video-intro-overlay {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Smooth video transitions */
+video {
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Custom loading spinner */
+@keyframes videoLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.video-loading {
+  animation: videoLoading 1s linear infinite;
+}
+
+/* Skip button hover effects */
+.skip-button-glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.skip-button-glow:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+/* Typewriter Cursor Styles */
+.typewriter-cursor {
+  animation: blink 1s infinite;
+  font-weight: normal;
+  color: currentColor;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Smooth typewriter text animation */
+.typewriter-text {
+  display: inline-block;
+  min-height: 1em;
+}

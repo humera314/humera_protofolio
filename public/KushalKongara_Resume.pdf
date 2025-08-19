@@ -1,0 +1,122 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 1200
+>>
+stream
+BT
+/F1 24 Tf
+50 750 Td
+(KUSHAL KONGARA) Tj
+/F1 12 Tf
+0 -20 Td
+(Full-Stack Developer & Cloud-Native Architect) Tj
+0 -30 Td
+(Phone: (659) 253-0511 | Email: kkushal2509@gmail.com) Tj
+0 -15 Td
+(LinkedIn: linkedin.com/in/kushalkongara | GitHub: github.com/Kushal-Kongara) Tj
+
+0 -40 Td
+/F1 16 Tf
+(EXPERIENCE) Tj
+/F1 12 Tf
+0 -25 Td
+(Software Engineer | Dispatch Track | Apr 2021 – Jan 2023) Tj
+0 -15 Td
+(• Built/maintained high-performance React front-ends & Node.js microservices) Tj
+0 -15 Td
+(• Handled 250K+ daily requests with optimized architecture) Tj
+
+0 -25 Td
+(Jr. Software Engineer | Dispatch Track | Dec 2020 – Apr 2021) Tj
+0 -15 Td
+(• Developed enterprise Angular apps; optimized DB queries & CI/CD with Jenkins) Tj
+
+0 -25 Td
+(Software Engineer | Code Kindle | Dec 2019 – Nov 2020) Tj
+0 -15 Td
+(• Created responsive Angular/TypeScript UIs, improved test coverage with Cypress) Tj
+
+0 -40 Td
+/F1 16 Tf
+(SKILLS) Tj
+/F1 12 Tf
+0 -20 Td
+(Languages: JavaScript, TypeScript, Java, Python) Tj
+0 -15 Td
+(Frontend: React.js, Angular, Vue.js, Next.js, Tailwind CSS) Tj
+0 -15 Td
+(Backend: Node.js, Express.js, NestJS, Spring Boot, Django) Tj
+0 -15 Td
+(Databases: MySQL, PostgreSQL, MongoDB) Tj
+0 -15 Td
+(Cloud & DevOps: AWS (EC2, S3, Lambda), Docker, Kubernetes, Jenkins) Tj
+0 -15 Td
+(Tools: Git, GitHub, CI/CD pipelines, Selenium, Jasmine) Tj
+
+0 -40 Td
+/F1 16 Tf
+(EDUCATION) Tj
+/F1 12 Tf
+0 -20 Td
+(Master's in Computer Science) Tj
+0 -15 Td
+(Bachelor's in Mechanical Engineering) Tj
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000109 00000 n 
+0000000267 00000 n 
+0000001520 00000 n 
+trailer
+<<
+/Size 6
+/Root 1 0 R
+>>
+startxref
+1593
+%%EOF
