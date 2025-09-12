@@ -39,6 +39,17 @@ MyPortfolio-SpaceThemed/
 └── tsconfig.json          # TypeScript configuration
 
 
+MyPortfolio-SpaceThemed/
+├── public/                # Static assets (images, icons, favicon, etc.)
+├── src/                   # Application source code
+│   ├── components/        # Reusable UI components
+│   ├── views/             # Page-level components (Home, About, Projects, Contact)
+│   ├── styles/            # Global styles, Tailwind/theme configuration
+│   └── App.tsx            # Main application entry
+├── index.html             # Root HTML file
+├── tailwind.config.ts     # Tailwind CSS configuration
+├── package.json           # Project metadata and dependencies
+└── tsconfig.json          # TypeScript configuration
 
 ---
 
@@ -51,4 +62,5 @@ git clone https://github.com/Kushal-Kongara/MyPortfolio-SpaceThemed.git
 cd MyPortfolio-SpaceThemed
 npm install
 npm run dev
+
 
