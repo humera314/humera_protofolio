@@ -48,6 +48,30 @@ git clone https://github.com/Kushal-Kongara/MyPortfolio-SpaceThemed.git
 cd MyPortfolio-SpaceThemed
 npm install
 npm run dev
+```
+
+## 🤖 VAPI AI Integration
+
+This portfolio includes a "Talk with AI" button that integrates with VAPI for voice conversations.
+
+### Setup VAPI:
+
+1. **Get your VAPI credentials:**
+   - Sign up at [vapi.ai](https://vapi.ai/)
+   - Get your API key from the dashboard
+   - Create an AI assistant and note the Assistant ID
+
+2. **Configure environment variables:**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_VAPI_API_KEY=your_vapi_api_key_here
+   VITE_VAPI_ASSISTANT_ID=your_assistant_id_here
+   ```
+
+3. **Test the integration:**
+   - Click the "Talk with AI" button
+   - Allow microphone permissions when prompted
+   - Start a voice conversation with your AI assistant
 
 
 

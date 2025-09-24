@@ -1,18 +1,64 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Download } from "lucide-react";
+import { Github, Linkedin, Instagram, Download, Bot } from "lucide-react";
+import { useState, useEffect } from "react";
+import Vapi from "@vapi-ai/web";
 
 import { Button } from "./ui/button";
 import MilkyWayShootingStars from "./MilkyWayShootingStars";
 import SpaceShip from "./Spaceship";
 
 const Hero = () => {
+  const [vapi, setVapi] = useState<Vapi | null>(null);
+  const [isCallActive, setIsCallActive] = useState(false);
+
+  // Initialize VAPI
+  useEffect(() => {
+    const vapiInstance = new Vapi(import.meta.env.VITE_VAPI_API_KEY || "YOUR_VAPI_API_KEY");
+    setVapi(vapiInstance);
+
+    // Event listeners
+    vapiInstance.on("call-start", () => {
+      console.log("Call started");
+      setIsCallActive(true);
+    });
+
+    vapiInstance.on("call-end", () => {
+      console.log("Call ended");
+      setIsCallActive(false);
+    });
+
+    vapiInstance.on("error", (error) => {
+      console.error("VAPI Error:", error);
+      setIsCallActive(false);
+    });
+
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
   const handleDownloadResume = () => {
     const link = document.createElement("a");
     link.href = "/KushalKongara_Resume.pdf";
     link.download = "KushalKongara_Resume.pdf";
     link.click();
+  };
+
+  const handleTalkWithAI = () => {
+    if (!vapi) {
+      console.error("VAPI not initialized");
+      return;
+    }
+
+    if (isCallActive) {
+      // End the call
+      vapi.stop();
+    } else {
+      // Start the call
+      vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID || "YOUR_ASSISTANT_ID");
+    }
   };
 
   const socialLinks = [
@@ -112,6 +158,19 @@ const Hero = () => {
           >
             <Download className="w-5 h-5 mr-2" />
             Download Resume
+          </Button>
+          <Button
+            onClick={handleTalkWithAI}
+            variant="outline"
+            size="lg"
+            className={`bg-transparent border-2 font-semibold px-8 py-3 transition-all duration-300 ${
+              isCallActive
+                ? "border-red-400 text-red-400 hover:bg-red-400 hover:text-black"
+                : "border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black"
+            }`}
+          >
+            <Bot className="w-5 h-5 mr-2" />
+            {isCallActive ? "End Call" : "Talk with AI"}
           </Button>
         </motion.div>
 
