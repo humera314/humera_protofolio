@@ -114,10 +114,70 @@ const Hero = () => {
           className="mb-8"
         >
           <div className="relative inline-block">
+            {/* Speaking orb effect */}
+            {isCallActive && (
+              <div className="absolute inset-0 -m-4">
+                <motion.div
+                  className="absolute inset-0 rounded-full border-2 border-cyan-400/50"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                    opacity: [0.5, 0.8, 0.5],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                <motion.div
+                  className="absolute inset-0 rounded-full border-2 border-cyan-400/30"
+                  animate={{
+                    scale: [1, 1.4, 1],
+                    opacity: [0.3, 0.6, 0.3],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5,
+                  }}
+                />
+                <motion.div
+                  className="absolute inset-0 rounded-full border-2 border-cyan-400/20"
+                  animate={{
+                    scale: [1, 1.6, 1],
+                    opacity: [0.2, 0.4, 0.2],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1,
+                  }}
+                />
+                {/* Pulsing center dot */}
+                <motion.div
+                  className="absolute top-1/2 left-1/2 w-3 h-3 bg-cyan-400 rounded-full -translate-x-1/2 -translate-y-1/2"
+                  animate={{
+                    scale: [1, 1.5, 1],
+                    opacity: [0.8, 1, 0.8],
+                  }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+              </div>
+            )}
             <img
               src="/images/01.jpg"
               alt="Kushal Kongara"
-              className="w-48 h-48 rounded-full object-cover mx-auto border-2 border-white/20"
+              className={`w-48 h-48 rounded-full object-cover mx-auto border-2 transition-all duration-300 ${
+                isCallActive 
+                  ? "border-cyan-400/60 shadow-lg shadow-cyan-400/20" 
+                  : "border-white/20"
+              }`}
               loading="lazy"
             />
           </div>
@@ -140,7 +200,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto"
         >
-          Full-Stack Developer & Cloud-Native Architect
+          Full-Stack Developer | Frontend Engineer | Exploring AI Agents
         </motion.p>
 
         {/* CTA */}
