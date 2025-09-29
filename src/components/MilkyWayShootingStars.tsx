@@ -9,7 +9,7 @@ interface ShootingStar {
   opacity: number;
 }
 
-const STAR_COUNT = 80;
+const STAR_COUNT = 800;
 const SHOOTING_STAR_COUNT = 3;
 
 const random = (min: number, max: number) => Math.random() * (max - min) + min;
@@ -61,7 +61,7 @@ const MilkyWayShootingStars: React.FC = () => {
         ctx.globalAlpha = star.opacity;
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.r, 0, 2 * Math.PI);
-        ctx.fillStyle = "#fff";
+        ctx.fillStyle = "#e5a9a9ff";
         ctx.shadowColor = "#fff";
         ctx.shadowBlur = 8;
         ctx.fill();
@@ -71,8 +71,8 @@ const MilkyWayShootingStars: React.FC = () => {
       for (const s of shootingStars.current) {
         ctx.save();
         ctx.globalAlpha = s.opacity;
-        ctx.strokeStyle = "#fff";
-        ctx.shadowColor = "#fff";
+        ctx.strokeStyle = "#1fa0ebff";
+        ctx.shadowColor = "#90e8a5ff";
         ctx.shadowBlur = 16;
         ctx.lineWidth = 2;
         ctx.beginPath();

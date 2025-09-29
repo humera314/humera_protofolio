@@ -143,7 +143,7 @@ const VideoIntro: React.FC<VideoIntroProps> = ({
               className="absolute bottom-24 left-8 text-white z-10"
             >
               <h1 className="text-2xl md:text-3xl font-bold mb-2">
-                Welcome to Kushal's Cosmic Canvas
+                Welcome to Humera's Cosmic Canvas
               </h1>
               <p className="text-lg text-white/80">
                 Exploring the universe of possibilities

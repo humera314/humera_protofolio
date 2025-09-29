@@ -95,7 +95,7 @@ const VideoIntroFallback: React.FC<VideoIntroFallbackProps> = ({
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
             >
-              Kushal's Cosmic Canvas
+              Humera's Cosmic Canvas
             </motion.h1>
 
             <motion.p
@@ -132,7 +132,7 @@ const VideoIntroFallback: React.FC<VideoIntroFallbackProps> = ({
               className="text-white/60"
             >
               <p className="text-lg">
-                Full-Stack Developer & Cloud-Native Architect
+                Full-Stack Developer 
               </p>
             </motion.div>
           </div>

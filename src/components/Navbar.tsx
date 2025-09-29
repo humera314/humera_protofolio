@@ -16,6 +16,7 @@ const Navbar = () => {
         "experience",
         "projects",
         "story",
+        "certificates",
         "contact",
       ];
       const current = sections.find((section) => {
@@ -46,6 +47,7 @@ const Navbar = () => {
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "story", label: "Story" },
+    { id: "certificate", label: "Certificates" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -68,7 +70,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Kushal Kongara
+            Humera Naaz
           </motion.button>
 
           {/* Navigation Links */}

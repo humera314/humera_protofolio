@@ -5,6 +5,7 @@ import TechStack from '../components/TechStack';
 import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import Story from '../components/Story';
+import Certificates from '../components/certificate';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -18,6 +19,7 @@ const Index = () => {
       <Experience />
       <Projects />
       <Story />
+      <Certificates/>
       <Contact />
       <Footer />
     </div>

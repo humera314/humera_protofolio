@@ -36,7 +36,7 @@ const Story = () => {
               <div className="relative">
                 <motion.img
                   src="/images/02.jpg"
-                  alt="Kushal Kongara - Journey"
+                  alt="Humera - Journey"
                   className="w-full h-64 object-cover rounded-xl border-2 border-white/20"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
@@ -48,7 +48,7 @@ const Story = () => {
               <div className="relative">
                 <motion.img
                   src="/images/03.jpg"
-                  alt="Kushal Kongara - Adventures"
+                  alt="Humera - Adventures"
                   className="w-full h-64 object-cover rounded-xl border-2 border-white/20"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
@@ -67,20 +67,23 @@ const Story = () => {
             >
               <div className="card-minimal">
                 <p className="text-lg leading-relaxed text-white">
-                  Hi, I'm Kushal. I hold a Master's in Computer Science and
-                  began in Mechanical Engineering until the COVID lockdown
-                  inspired my pivot to web development. From simple WordPress
-                  blogs to full-stack React/Django apps, I've mastered UI/UX,
-                  front-end, back-end, databases and deployments.
+                  Hi, I'm Humera. I hold a Master's in Computer Science.
+                  From simple WordPress blogs to full-stack React/Django apps,
+                  I've mastered UI/UX, front-end, back-end, databases and deployments.
+                  blaw aaaaaalre Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Modi pariatur voluptatibus, assumenda non soluta veniam, labore voluptatum veritatis, similique provident 
+                  itaque laboriosam nihil id quia voluptatem odio alias accusamus deserunt?
                 </p>
               </div>
 
               <div className="card-minimal">
                 <p className="text-lg leading-relaxed text-white">
                   A Hollywood movie buff dreaming of SF & NY, I'm now crafting
-                  world-class web experiences in the US. My journey from
-                  mechanical systems to digital solutions has given me a unique
-                  perspective on problem-solving and innovation.
+                  world-class web experiences in the US. 
+                  Why be a programmer? Because I get to boss computers around 
+                  until they listen. It’s part puzzle-solving, part wizardry, 
+                  and part caffeine ritual. And honestly, nothing beats the 
+                  thrill of seeing “it finally runs” at 2 a.m.
                 </p>
               </div>
 

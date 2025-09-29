@@ -7,57 +7,59 @@ import { Calendar, MapPin } from "lucide-react";
 const experiences = [
   {
     title: "Software Engineer",
-    company: "Cyber Infrastructure",
-    period: "Feb 2025 – Present",
+    company: "High Wages",
+    period: "October 2025 – Present",
     location: "Remote",
     description:
-      "Built/maintained high-performance React front-ends & Node.js microservices handling 250K+ daily requests",
+      "Designed and optimized multi-turn conversational AI workflows using LLMs  with RAG and vector databases to improve context retention and automation.",
     achievements: [
-      "Architected scalable microservices handling 250K+ daily requests",
-      "Optimized React applications for 40% faster load times",
-      "Implemented real-time features using WebSocket technology",
-      "Led code reviews and mentored junior developers",
+  "Improved response accuracy by 30% through prompt engineering and context-aware retrieval with LangChain + embeddings",
+  "Integrated AI-driven dialogue systems with APIs and enterprise tools to automate workflows",
+  "Deployed A/B testing and monitoring pipelines to refine intent recognition and conversational performance"
+],  
+  },
+  
+  {
+    title: "Software Developer",
+    company: "One Community",
+    period: "September 2024 – May 2025",
+    location: "California, USA",
+    description:
+      "Developed and optimized full-stack web applications using the MERN stack, delivering secure microservices and responsive front-ends.",
+    achievements: [
+      "Built and optimized RESTful APIs with JWT/OAuth authentication, reducing API response times by 40%",
+      "Implemented responsive React.js frontends with Redux in collaboration with UI/UX designers (Figma)",
+      "Automated CI/CD pipelines with Jenkins, GitHub Actions, and Docker to improve deployment speed and reliability",
+      "Delivered production-ready MERN stack applications supporting scalable web services"
     ],
   },
+
   {
     title: "Master's in Computer science",
     company: "San Francisco Bay university",
-    period: "May 2023 – Dec 2024",
+    period: "May 2023 – Aug 2024",
     location: "Fremont",
     description:
       "I've obtained my Master's degree in computer science from San Francisco Bay university",
     achievements: [
-      "Gained in-depth knowledge on Subjects like DBMS, Gen-AI, Cyber security",
-      "Build College dormitory website where students could find there perfect room-mate according to their preference with the help of AI",
-    ],
+    "Developed an AI-powered fitness application with personalized chat-based recommendations",
+    "Implemented gamification features such as streaks, badges, and challenges to enhance user retention",
+    "Delivered a full-stack prototype with modern UI/UX and integrated AI capabilities"
+  ],
   },
+
   {
-    title: "Software Engineer",
-    company: "Dispatch Track",
-    period: "Dec 2021 – Dec 2022",
-    location: "Remote",
+    title: "Software Developer Engineer",
+    company: "Infosys",
+    period: "December 2021 – April 2023",
+    location: "Hyderabad, India",
     description:
-      "Developed enterprise Angular apps; optimized DB queries & CI/CD with Jenkins",
+      "Developed and maintained enterprise-grade applications with Java, Spring Boot, AngularJS, and relational databases, delivering scalable APIs and improving release efficiency.",
     achievements: [
-      "Developed responsive Angular applications for enterprise clients",
-      "Optimized database queries reducing response time by 60%",
-      "Implemented CI/CD pipelines using Jenkins and Docker",
-      "Collaborated with cross-functional teams on product features",
-    ],
-  },
-  {
-    title: "Software Engineer",
-    company: "L&T Software developer",
-    period: "Dec 2019 – Nov 2020",
-    location: "Remote",
-    description:
-      "Created responsive Angular/TypeScript UIs, improved test coverage with Cypress",
-    achievements: [
-      "Built responsive web applications using Angular and TypeScript",
-      "Improved test coverage from 40% to 85% using Cypress",
-      "Integrated third-party APIs and payment gateways",
-      "Participated in agile development processes and sprint planning",
-    ],
+  "Built and optimized RESTful APIs with Java & Spring Boot, improving modularity and reducing query latency by 20%",
+  "Established CI/CD pipelines with Git, Bitbucket, and Jenkins, accelerating release cycles by 25%",
+  "Increased unit test coverage to 85% with JUnit/Mockito, reducing post-release bugs"
+  ],
   },
 ];
 

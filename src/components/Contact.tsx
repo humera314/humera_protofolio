@@ -78,17 +78,17 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/kushalkongara/",
+      href: "https://www.linkedin.com/in/humera-naaz14/",
       label: "LinkedIn",
     },
     {
       icon: Github,
-      href: "https://github.com/Kushal-Kongara",
+      href: "https://github.com/humera314",
       label: "GitHub",
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/kushal_kongara/",
+      href: "https://www.instagram.com/",
       label: "Instagram",
     },
   ];
@@ -229,7 +229,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-foreground/70">(659) 253-0511</p>
+                    <p className="text-foreground/70">(425) 219-2592</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -238,7 +238,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-foreground/70">kkushal2509@gmail.com</p>
+                    <p className="text-foreground/70">nhumera43@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -289,12 +289,15 @@ const Contact = () => {
                   ease: "easeInOut",
                 }}
               >
-                <img
-                  src="public\meme01.jpeg" /* place your meme at /public/images/meme01.jpg */
+                {/* <img
+                
+                  src="public\images\certification.png" 
+                  width={20}
+                  height={30}
                   alt="Funny LinkedIn meme"
                   className="w-full h-auto object-cover"
                   draggable={false}
-                />
+                /> */}
               </motion.div>
 
               {/* soft gradient overlay for readability */}

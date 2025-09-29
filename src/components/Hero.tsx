@@ -41,8 +41,8 @@ const Hero = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/KushalKongara_Resume.pdf";
-    link.download = "KushalKongara_Resume.pdf";
+    link.href = "/Humera_Naaz_AI.pdf";
+    link.download = "Humera.pdf";
     link.click();
   };
 
@@ -116,7 +116,7 @@ const Hero = () => {
           <div className="relative inline-block">
             <img
               src="/images/01.jpg"
-              alt="Kushal Kongara"
+              alt="HN"
               className="w-48 h-48 rounded-full object-cover mx-auto border-2 border-white/20"
               loading="lazy"
             />
@@ -130,7 +130,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-5xl md:text-6xl font-extrabold mb-6 text-white"
         >
-          Hi, I'm Kushal Kongara
+          Hi, I'm Humera Naaz
         </motion.h1>
 
         {/* Subtitle */}

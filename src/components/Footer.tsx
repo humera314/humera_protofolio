@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             {/* Copyright */}
             <p className="text-white/70 text-sm">
-              © 2025 Kushal Kongara. All rights reserved.
+              © 2025 Humera Naaz. All rights reserved.
             </p>
           </div>
 
