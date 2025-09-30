@@ -64,17 +64,17 @@ const Hero = () => {
   const socialLinks = [
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/kushalkongara/",
+      href: "https://www.linkedin.com/in/humera-naaz14/",
       label: "LinkedIn",
     },
     {
       icon: Github,
-      href: "https://github.com/Kushal-Kongara",
+      href: "https://github.com/humera314",
       label: "GitHub",
     },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/kushal_kongara/",
+      href: "https://www.instagram.com/",
       label: "Instagram",
     },
   ];
