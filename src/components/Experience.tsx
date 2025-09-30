@@ -6,6 +6,20 @@ import { Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
+    title: "Lead Full Stack Developer",
+    company: "Oatmeal AI",
+    period: "AUG 2025 – Present",
+    location: "Remote",
+    description:
+      "Migrated the entire website to Next.js and implemented AI agents for the website",
+    achievements: [
+      "Migrated the entire website to Next.js and implemented AI agents for the website",
+      "Implemented AI agents for the website",
+      "Built a React Native app for the website",
+    ],
+  },
+
+  {
     title: "Software Engineer",
     company: "High Wages",
     period: "October 2025 – Present",
