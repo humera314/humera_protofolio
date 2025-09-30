@@ -113,7 +113,6 @@ const Contact = () => {
   };
 
   const socialLinks = [
-<<<<<<< HEAD
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/in/humera-naaz14/",
@@ -129,11 +128,11 @@ const Contact = () => {
       href: "https://www.instagram.com/",
       label: "Instagram",
     },
-=======
+
     { icon: Linkedin, href: "https://www.linkedin.com/in/kushalkongara/", label: "LinkedIn" },
     { icon: Github,   href: "https://github.com/Kushal-Kongara",          label: "GitHub"   },
     { icon: Instagram,href: "https://www.instagram.com/kushal_kongara/",  label: "Instagram"},
->>>>>>> origin/main
+
   ];
 
   return (
@@ -308,7 +307,6 @@ const Contact = () => {
               transition={{ duration: 6, ease: "easeInOut" }}
               className="relative overflow-hidden rounded-xl border border-white/15 bg-white/5 backdrop-blur-md"
             >
-<<<<<<< HEAD
               {/* subtle float loop */}
               <motion.div
                 animate={{ y: [0, -8, 0] }}
@@ -323,11 +321,11 @@ const Contact = () => {
                   src="public\images\certification.png" 
                   width={20}
                   height={30}
-=======
+
               <motion.div animate={{ y: [0, -8, 0] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}>
                 <img
                   src="/meme01.jpeg"  // place the file under /public/meme01.jpeg
->>>>>>> origin/main
+
                   alt="Funny LinkedIn meme"
                   className="w-full h-auto object-cover"
                   draggable={false}
