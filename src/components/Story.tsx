@@ -67,12 +67,10 @@ const Story = () => {
             >
               <div className="card-minimal">
                 <p className="text-lg leading-relaxed text-white">
-                  Hi, I'm Humera. I hold a Master's in Computer Science.
-                  From simple WordPress blogs to full-stack React/Django apps,
-                  I've mastered UI/UX, front-end, back-end, databases and deployments.
-                  blaw aaaaaalre Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Modi pariatur voluptatibus, assumenda non soluta veniam, labore voluptatum veritatis, similique provident 
-                  itaque laboriosam nihil id quia voluptatem odio alias accusamus deserunt?
+                   Hi, I’m Humera — a curious builder with a Master’s in Computer Science.
+I’ve gone from spinning up WordPress blogs to architecting full-stack apps with React, Django, and Java Spring Boot.
+Along the way I’ve picked up the craft of UI/UX design, front-end and back-end engineering, databases, and deployments.
+What excites me most? Taking an idea from scratch and turning it into something people actually use and enjoy. 
                 </p>
               </div>
 

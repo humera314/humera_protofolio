@@ -172,19 +172,15 @@ const Hero = () => {
             )}
             <img
               src="/images/01.jpg"
-<<<<<<< HEAD
-              alt="HN"
-              className="w-48 h-48 rounded-full object-cover mx-auto border-2 border-white/20"
-=======
-              alt="Kushal Kongara"
+              alt="Humera Naaz"
               className={`w-48 h-48 rounded-full object-cover mx-auto border-2 transition-all duration-300 ${
                 isCallActive 
                   ? "border-cyan-400/60 shadow-lg shadow-cyan-400/20" 
                   : "border-white/20"
               }`}
->>>>>>> origin/main
               loading="lazy"
-            />
+/>
+
           </div>
         </motion.div>
 
