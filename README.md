@@ -45,7 +45,7 @@ To get this portfolio running locally:
 
 ```bash
 git clone https://github.com/humera314/humera_protofolio.git
-cd MyPortfolio-SpaceThemed
+
 npm install
 npm run dev
 ```
