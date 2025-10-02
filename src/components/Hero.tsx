@@ -8,6 +8,117 @@ import Vapi from "@vapi-ai/web";
 import { Button } from "./ui/button";
 import MilkyWayShootingStars from "./MilkyWayShootingStars";
 import SpaceShip from "./Spaceship";
+import CuboidPortrait from "./CuboidPortrait";
+
+/* ---------- Unique, still 3D portrait ---------- */
+function HoloPortrait({
+  src,
+  alt,
+  size = 192, // avatar size
+}: {
+  src: string;
+  alt?: string;
+  size?: number;
+}) {
+  return (
+    <div className="relative inline-block" style={{ perspective: 1000 }}>
+      <motion.div
+        className="relative rounded-full overflow-hidden border border-white/15 bg-white/5"
+        style={{
+          width: size,
+          height: size,
+          transformStyle: "preserve-3d",
+        }}
+        /* Gentle autonomous “orbit” to imply 3D (no mouse needed) */
+        animate={{
+          rotateX: [0, 6, 0, -6, 0],
+          rotateY: [0, -8, 0, 8, 0],
+        }}
+        transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+      >
+        {/* Far blue cloud that fades out (disappears) */}
+        <motion.div
+          className="absolute inset-0 pointer-events-none rounded-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0, 0.5, 0.5, 0] }}
+          transition={{ duration: 10, times: [0, 0.2, 0.7, 1], ease: "easeInOut" }}
+          style={{
+            transform: "translateZ(-100px)",
+            background:
+              "radial-gradient(60% 50% at 40% 40%, rgba(90,150,255,0.22), rgba(0,0,0,0) 60%)," +
+              "radial-gradient(55% 45% at 70% 30%, rgba(120,170,255,0.14), rgba(0,0,0,0) 60%)",
+            filter: "blur(16px)",
+            mixBlendMode: "screen",
+          }}
+          aria-hidden
+        />
+
+        {/* Depth layer (back) */}
+        <div className="absolute inset-0 rounded-full" style={{ transform: "translateZ(-20px)" }}>
+          <img src={src} alt={alt} className="w-full h-full object-cover opacity-65" />
+        </div>
+
+        {/* Main image (front) */}
+        <div className="absolute inset-0 rounded-full" style={{ transform: "translateZ(0px)" }}>
+          <img src={src} alt={alt} className="w-full h-full object-cover" />
+        </div>
+
+        {/* Soft inner vignette to add depth */}
+        <div
+          className="absolute inset-0 rounded-full pointer-events-none"
+          style={{
+            transform: "translateZ(8px)",
+            background:
+              "radial-gradient(120% 120% at 50% 35%, rgba(255,255,255,0.06), rgba(0,0,0,0) 50%), " +
+              "radial-gradient(100% 100% at 50% 80%, rgba(0,0,0,0.25), rgba(0,0,0,0) 60%)",
+          }}
+          aria-hidden
+        />
+
+        {/* Shine sweep */}
+        <motion.div
+          className="absolute inset-0 rounded-full pointer-events-none"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0.0, 0.5, 0.0] }}
+          transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 4 }}
+          style={{
+            transform: "translateZ(10px)",
+            background:
+              "linear-gradient(70deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 60%)",
+            maskImage:
+              "radial-gradient(120% 120% at 10% 50%, black 35%, transparent 60%)",
+            mixBlendMode: "screen",
+          }}
+          aria-hidden
+        />
+
+        {/* Subtle scanlines (hologram feel) */}
+        <div
+          className="absolute inset-0 rounded-full pointer-events-none opacity-30"
+          style={{
+            transform: "translateZ(6px)",
+            backgroundImage:
+              "repeating-linear-gradient(180deg, rgba(200,240,255,0.08) 0px, rgba(200,240,255,0.08) 1px, transparent 2px, transparent 4px)",
+            mixBlendMode: "screen",
+          }}
+          aria-hidden
+        />
+
+        {/* Base shadow */}
+        <div
+          aria-hidden
+          className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-[70%] h-8 blur-xl rounded-full"
+          style={{
+            transform: "translateZ(-30px)",
+            background:
+              "radial-gradient(50% 70% at 50% 50%, rgba(0,0,0,0.7), transparent 70%)",
+          }}
+        />
+      </motion.div>
+    </div>
+  );
+}
+/* ---------- end HoloPortrait ---------- */
 
 const Hero = () => {
   const [vapi, setVapi] = useState<Vapi | null>(null);
@@ -19,20 +130,9 @@ const Hero = () => {
     setVapi(vapiInstance);
 
     // Event listeners
-    vapiInstance.on("call-start", () => {
-      console.log("Call started");
-      setIsCallActive(true);
-    });
-
-    vapiInstance.on("call-end", () => {
-      console.log("Call ended");
-      setIsCallActive(false);
-    });
-
-    vapiInstance.on("error", (error) => {
-      console.error("VAPI Error:", error);
-      setIsCallActive(false);
-    });
+    vapiInstance.on("call-start", () => setIsCallActive(true));
+    vapiInstance.on("call-end", () => setIsCallActive(false));
+    vapiInstance.on("error", () => setIsCallActive(false));
 
     return () => {
       // Cleanup if needed
@@ -47,36 +147,15 @@ const Hero = () => {
   };
 
   const handleTalkWithAI = () => {
-    if (!vapi) {
-      console.error("VAPI not initialized");
-      return;
-    }
-
-    if (isCallActive) {
-      // End the call
-      vapi.stop();
-    } else {
-      // Start the call
-      vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID || "YOUR_ASSISTANT_ID");
-    }
+    if (!vapi) return;
+    if (isCallActive) vapi.stop();
+    else vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID || "YOUR_ASSISTANT_ID");
   };
 
   const socialLinks = [
-    {
-      icon: Linkedin,
-      href: "https://www.linkedin.com/in/humera-naaz14/",
-      label: "LinkedIn",
-    },
-    {
-      icon: Github,
-      href: "https://github.com/humera314",
-      label: "GitHub",
-    },
-    {
-      icon: Instagram,
-      href: "https://www.instagram.com/",
-      label: "Instagram",
-    },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/humera-naaz14/", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/humera314", label: "GitHub" },
+    { icon: Instagram, href: "https://www.instagram.com/", label: "Instagram" },
   ];
 
   return (
@@ -84,9 +163,7 @@ const Hero = () => {
       id="hero"
       className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center"
     >
-      {/* LAYER 0: Space image (put your file in /public or /public/images) */}
-      {/* If you saved it as /public/background.jpg -> src="/background.jpg" */}
-      {/* If you saved it as /public/images/background.jpg -> src="/images/background.jpg" */}
+      {/* LAYER 0: Space image */}
       <img
         src="/background.jpg"
         alt=""
@@ -106,82 +183,40 @@ const Hero = () => {
 
       {/* LAYER 3: Foreground content */}
       <div className="container mx-auto px-4 text-center relative z-[3]">
-        {/* Avatar */}
+        {/* Avatar (Holographic 3D Portrait) */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.86 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-8"
         >
-          <div className="relative inline-block">
-            {/* Speaking orb effect */}
-            {isCallActive && (
-              <div className="absolute inset-0 -m-4">
-                <motion.div
-                  className="absolute inset-0 rounded-full border-2 border-cyan-400/50"
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    opacity: [0.5, 0.8, 0.5],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-                <motion.div
-                  className="absolute inset-0 rounded-full border-2 border-cyan-400/30"
-                  animate={{
-                    scale: [1, 1.4, 1],
-                    opacity: [0.3, 0.6, 0.3],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.5,
-                  }}
-                />
-                <motion.div
-                  className="absolute inset-0 rounded-full border-2 border-cyan-400/20"
-                  animate={{
-                    scale: [1, 1.6, 1],
-                    opacity: [0.2, 0.4, 0.2],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1,
-                  }}
-                />
-                {/* Pulsing center dot */}
-                <motion.div
-                  className="absolute top-1/2 left-1/2 w-3 h-3 bg-cyan-400 rounded-full -translate-x-1/2 -translate-y-1/2"
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.8, 1, 0.8],
-                  }}
-                  transition={{
-                    duration: 1,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                />
-              </div>
-            )}
-            <img
-              src="/images/01.jpg"
-              alt="Humera Naaz"
-              className={`w-48 h-48 rounded-full object-cover mx-auto border-2 transition-all duration-300 ${
-                isCallActive 
-                  ? "border-cyan-400/60 shadow-lg shadow-cyan-400/20" 
-                  : "border-white/20"
-              }`}
-              loading="lazy"
-/>
+        
+        {/* Avatar (Cuboid portrait inside a glass box) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.86 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-8"
+        >
+         <CuboidPortrait
+            front="/images/01.jpg"
+            back="/images/02.jpg"
+            left="/images/03.jpg"
+            right="/images/04.jpg"
+            top="/images/05.jpg"
+            bottom="/images/06.jpg"
+            size={260}
+            depth={260}
+            gap={12}
+            frameOpacity={0.18}
+            rotateDurationSec={30}   // slower spin
+            resumeDelayMs={500}      // half-second delay after mouse leaves
+          />
 
-          </div>
+
+        </motion.div>
+
+
         </motion.div>
 
         {/* Heading */}

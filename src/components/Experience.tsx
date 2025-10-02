@@ -6,53 +6,26 @@ import { Calendar, MapPin } from "lucide-react";
 
 const experiences = [
   {
-    title: "Lead Full Stack Developer",
-    company: "Oatmeal AI",
-    period: "AUG 2025 – Present",
-    location: "Remote",
-    description:
-      "Migrated the entire website to Next.js and implemented AI agents for the website",
-    achievements: [
-      "Migrated the entire website to Next.js and implemented AI agents for the website",
-      "Implemented AI agents for the website",
-      "Built a React Native app for the website",
-    ],
-  },
-
-  {
     title: "Software Engineer",
-    company: "High Wages",
-    period: "October 2025 – Present",
-    location: "Remote",
+    company: "Cyber Infrastructure ",
+    period: "Sept 2025 – Present",
+    location: "San Jose, CA, USA",
     description:
       "Designed and optimized multi-turn conversational AI workflows using LLMs  with RAG and vector databases to improve context retention and automation.",
     achievements: [
-  "Improved response accuracy by 30% through prompt engineering and context-aware retrieval with LangChain + embeddings",
-  "Integrated AI-driven dialogue systems with APIs and enterprise tools to automate workflows",
-  "Deployed A/B testing and monitoring pipelines to refine intent recognition and conversational performance"
+   "Engineered scalable full-stack solutions (MERN) including a collaboration platform (+30% integration) and an AI workflow tool, earning recognition as Most Innovative Project.",
+
+    "Optimized financial systems by automating Stripe subscriptions, improving payment success (+5%), and saving $5K/month.",
+"Boosted backend efficiency with C++ extensions (+20% performance), SAP/API integrations, and LLM-powered chatbots that cut support resolution time by 25%."
 ],  
   },
   
-  {
-    title: "Software Developer",
-    company: "One Community",
-    period: "September 2024 – May 2025",
-    location: "California, USA",
-    description:
-      "Developed and optimized full-stack web applications using the MERN stack, delivering secure microservices and responsive front-ends.",
-    achievements: [
-      "Built and optimized RESTful APIs with JWT/OAuth authentication, reducing API response times by 40%",
-      "Implemented responsive React.js frontends with Redux in collaboration with UI/UX designers (Figma)",
-      "Automated CI/CD pipelines with Jenkins, GitHub Actions, and Docker to improve deployment speed and reliability",
-      "Delivered production-ready MERN stack applications supporting scalable web services"
-    ],
-  },
-
+  
   {
     title: "Master's in Computer science",
     company: "San Francisco Bay university",
     period: "May 2023 – Aug 2024",
-    location: "Fremont",
+    location: "Fremont, CA, USA",
     description:
       "I've obtained my Master's degree in computer science from San Francisco Bay university",
     achievements: [
@@ -65,14 +38,16 @@ const experiences = [
   {
     title: "Software Developer Engineer",
     company: "Infosys",
-    period: "December 2021 – April 2023",
+    period: "April 2021 – April 2023",
     location: "Hyderabad, India",
     description:
       "Developed and maintained enterprise-grade applications with Java, Spring Boot, AngularJS, and relational databases, delivering scalable APIs and improving release efficiency.",
     achievements: [
-  "Built and optimized RESTful APIs with Java & Spring Boot, improving modularity and reducing query latency by 20%",
-  "Established CI/CD pipelines with Git, Bitbucket, and Jenkins, accelerating release cycles by 25%",
-  "Increased unit test coverage to 85% with JUnit/Mockito, reducing post-release bugs"
+    "Automated IT workflows & monitoring with AIOps, ML-driven anomaly detection, and Prometheus alerts, achieving 95% SLA compliance and preventing 95%+ outages.",
+
+    "Built scalable microservices with REST APIs, Docker, and Kubernetes, reducing infra costs by 25% and improving system reliability.",
+
+    "Accelerated delivery pipelines by integrating GitLab, Jenkins, and Terraform, cutting deployment time by 60% and boosting release frequency 5x."
   ],
   },
 ];

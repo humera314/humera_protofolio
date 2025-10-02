@@ -129,10 +129,6 @@ const Contact = () => {
       label: "Instagram",
     },
 
-    { icon: Linkedin, href: "https://www.linkedin.com/in/kushalkongara/", label: "LinkedIn" },
-    { icon: Github,   href: "https://github.com/Kushal-Kongara",          label: "GitHub"   },
-    { icon: Instagram,href: "https://www.instagram.com/kushal_kongara/",  label: "Instagram"},
-
   ];
 
   return (

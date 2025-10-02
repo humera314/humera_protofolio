@@ -14,7 +14,7 @@ const Projects = () => {
       longDescription: 'A modern real-time chat application featuring WebSocket connections, message encryption, file sharing, and a beautiful space-themed UI. Built with React, TypeScript, and Socket.io.',
       icon: Rocket,
       technologies: ['React', 'TypeScript', 'Socket.io', 'Tailwind CSS', 'Node.js'],
-      github: 'https://github.com/Kushal-Kongara',
+      github: 'https://github.com/humera314',
       demo: '#',
       gradient: 'from-blue-500 to-purple-600'
     },
@@ -24,7 +24,7 @@ const Projects = () => {
       longDescription: 'Interactive data visualization platform for astronomical data using D3.js. Features real-time data updates, multiple chart types, and responsive design for exploring cosmic datasets.',
       icon: BarChart3,
       technologies: ['D3.js', 'React', 'TypeScript', 'WebSocket', 'Python'],
-      github: 'https://github.com/Kushal-Kongara',
+      github: 'https://github.com/humera314',
       demo: '#',
       gradient: 'from-orange-500 to-pink-600'
     }
