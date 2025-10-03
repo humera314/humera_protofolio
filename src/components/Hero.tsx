@@ -141,7 +141,7 @@ const Hero = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/Humera_Naaz_AI.pdf";
+    link.href = "/Humera_Naaz_FullStack.pdf";
     link.download = "Humera.pdf";
     link.click();
   };
