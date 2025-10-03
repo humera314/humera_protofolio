@@ -15,7 +15,7 @@ This drop-in addon adds a small prompt-to-parameters demo to your portfolio.
 ## Run backend
 1. `npm i express cors dotenv node-fetch`
 2. `npm i -D tsx @types/express`
-3. `OPENAI_API_KEY=sk-... npx tsx server/ai-server.ts`
+3. `OPENAI_API_KEY=your_openai_api_key_here... npx tsx server/ai-server.ts`
    - Defaults to `http://localhost:8787`
 
 ## Wire into your app

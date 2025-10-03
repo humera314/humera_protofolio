@@ -146,11 +146,11 @@ const Hero = () => {
     link.click();
   };
 
-  const handleTalkWithAI = () => {
-    if (!vapi) return;
-    if (isCallActive) vapi.stop();
-    else vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID || "YOUR_ASSISTANT_ID");
-  };
+  // const handleTalkWithAI = () => {
+  //   if (!vapi) return;
+  //   if (isCallActive) vapi.stop();
+  //   else vapi.start(import.meta.env.VITE_VAPI_ASSISTANT_ID || "YOUR_ASSISTANT_ID");
+  // };
 
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/humera-naaz14/", label: "LinkedIn" },
@@ -200,10 +200,10 @@ const Hero = () => {
         >
          <CuboidPortrait
             front="/images/01.jpg"
-            back="/images/02.jpg"
-            left="/images/03.jpg"
-            right="/images/04.jpg"
-            top="/images/05.jpg"
+            back="/images/pic1.png"
+            left="/images/pic3.jpg"
+            right="/images/pic2.png"
+            top="/images/pic4.png"
             bottom="/images/06.jpg"
             size={260}
             depth={260}
@@ -236,7 +236,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto"
         >
-          Full-Stack Developer | Frontend Engineer | Exploring AI Agents
+          Full-Stack Developer || Exploring AI Agents
         </motion.p>
 
         {/* CTA */}
@@ -255,7 +255,7 @@ const Hero = () => {
             <Download className="w-5 h-5 mr-2" />
             Download Resume
           </Button>
-          <Button
+          {/* <Button
             onClick={handleTalkWithAI}
             variant="outline"
             size="lg"
@@ -267,7 +267,7 @@ const Hero = () => {
           >
             <Bot className="w-5 h-5 mr-2" />
             {isCallActive ? "End Call" : "Talk with AI"}
-          </Button>
+          </Button> */}
         </motion.div>
 
         {/* Socials */}

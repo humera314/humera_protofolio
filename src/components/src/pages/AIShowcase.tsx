@@ -19,7 +19,7 @@ export default function AIShowcase() {
           <ol className="list-decimal pl-5 space-y-2 opacity-90">
             <li>Import <code>AICometDirector</code> anywhere in your page or hero section.</li>
             <li>Hook <code>onParams</code> into your Three.js or shader uniforms to update tail colors, speed, orbit, etc.</li>
-            <li>Run the local AI server: <code>OPENAI_API_KEY=sk-... tsx server/ai-server.ts</code>. Without a key, it still works with heuristics.</li>
+            <li>Run the local AI server: <code>OPENAI_API_KEY=your_openai_api_key_here... tsx server/ai-server.ts</code>. Without a key, it still works with heuristics.</li>
           </ol>
         </div>
       </div>

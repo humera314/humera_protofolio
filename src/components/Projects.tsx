@@ -14,7 +14,7 @@ const Projects = () => {
       longDescription: 'A modern real-time chat application featuring WebSocket connections, message encryption, file sharing, and a beautiful space-themed UI. Built with React, TypeScript, and Socket.io.',
       icon: Rocket,
       technologies: ['React', 'TypeScript', 'Socket.io', 'Tailwind CSS', 'Node.js'],
-      github: 'https://github.com/humera314',
+      github: 'https://github.com/humera314/Ollama_LLM',
       demo: '#',
       gradient: 'from-blue-500 to-purple-600'
     },
